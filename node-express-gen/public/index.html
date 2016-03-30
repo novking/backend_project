@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find your Mr./Miss Right</title>
+        <style>
+            fieldset {background: lightyellow; border: 10px solid yellow; margin-bottom: 10px; width:720px;}
+            label{width: 180px; display: inline-block; text-align: right; vertical-align: top; font-size: 21px} 
+            .chr {width: auto}
+            textarea{width: 360px;height: 50px; }
+            label:hover { font-size:40px }
+            input:hover {font-size: 40px}
+            
+        </style>
+        
+        
+    </head>
+    <body>
+    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+        <fieldset>
+            <legend><h2>Your Face</h2></legend>
+            <input type="file" required><br>
+            <label for="preview">Image Preview: </label>
+            <img id="preview">
+        </fieldset>
+        <fieldset>
+            <legend><h2>Your General Details</h2></legend>
+            <label for="text">Name: </label>
+            <input type="text" id="text" name="text" placeholder="Your Full Name.."/><br>
+            
+            <label for="gender">Gender: </label>
+            <input type="radio" id="gender" name="radio" required/>Male   
+            <input type="radio" id="gender" name="radio"/>Female<br>
+         
+            <label for="number">Age: </label>
+            <input type="number" id="number" name="number" required/><br>
+            
+            <label for="date">Birthday: </label>
+            <input type="date" id="date" name="date"/><br>
+            
+            <label for="color">Favorite Color: </label>
+            <input type="color" id="color" name="color" value="#00FFFF"/><br>
+            
+            <label for="country">Country: </label>
+            <select id="country" name="country">
+                <option value="no selection">N/A</option>
+                <option value="China">China</option>
+                <option value="US">US</option>
+                <option value="Canada">Canada</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="UK">UK</option>
+            </select><br />
+        </fieldset>
+        <fieldset>
+            <legend><h2>Your Indicators</h2></legend>
+            <label for="height">Height: </label>
+            Short <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"/> Tall<br />
+            
+            <label for="salary">Salary: </label>
+            Relatively Low <input type="range" min="0" max="100" step="5" id="salary" name="salary"/> Quite High<br />
+        </fieldset><br>
+        <fieldset>
+            <legend><h2>Your Contact Information</h2></legend>
+            
+            <label for="emal">Email: </label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="tel">Mobile: </label>
+            <input type="tel" name="tel" id="tel"><br>
+            
+            <label for="adr">Address: </label>
+            <textarea id="adr" name="adr" placeholder="Your address..."></textarea><br />
+            <label for="method">Prefered Contact Methods: </label>
+            <input class="chr" type="checkbox" name="chr[]" value="emal" id="method"/>Email
+            <input class="chr" type="checkbox" name="chr[]" value="whatsapp" >Whatsapp
+            <input class="chr" type="checkbox" name="chr[]" value="in_app_chat" >In-app chat<br>
+            
+        </fieldset><br>
+         <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+        <input type="submit" value="submit"/>
+    </form>
+       
+    </body>
+</html>
